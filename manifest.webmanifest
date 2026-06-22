@@ -1,8 +1,8 @@
 {
   "name": "Электронный акт РСОН",
-  "short_name": "ЭА РСОН",
-  "start_url": "./",
-  "scope": "./",
+  "short_name": "Акт РСОН",
+  "description": "PWA-форма электронного акта обследования РСОН v0.9",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#F2F4F6",
   "theme_color": "#0E2A38",
