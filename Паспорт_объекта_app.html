@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#0E2A38">
-<title>Электронный акт РСОН v0.11</title>
+<title>Электронный акт РСОН v0.12.1</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
 <style>
@@ -25,6 +25,25 @@ select.compactSelect{appearance:auto;background:#fff;font-weight:700}
 .typeSelectCard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
 .typeSelectCard label{font-weight:900}
 .choices{display:flex;flex-direction:column;gap:8px;margin-top:8px}.choice{display:flex;gap:11px;align-items:flex-start;padding:12px;border:1.5px solid var(--line);border-radius:10px;background:#fff}.choice input{width:23px;height:23px;flex-shrink:0}.choice .lbl{font-weight:700}.choice .sub{font-size:11px;color:var(--muted)}.choice input[type=checkbox]{appearance:auto;accent-color:var(--mint);border-radius:4px}.choice.singlechoice input[type=checkbox]{accent-color:var(--mint)}.choice.checked{border-color:var(--mint);background:#EAF7F4}.choices.compact{gap:6px;margin:8px 0}.choices.compact .choice{padding:8px;font-size:13px}.kanalblock{border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}.kanalblock .kanalother{margin-top:6px}.linebox{border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0;background:#fff}.linebox h4{font-size:15px;margin:0 0 8px}.linerow{display:grid;grid-template-columns:28px 1fr 74px 44px;gap:6px;align-items:center;margin:7px 0}.linerow.kanalrow{grid-template-columns:28px 1fr 102px 82px}.linerow.kanalrow .kanalother{grid-column:2 / 5}.linerow input[type=checkbox]{width:22px;height:22px}.linerow label{font-size:13px;font-weight:700}.linerow input,.linerow select{margin-top:0;padding:8px}.small2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.small3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.gpsbtn{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:12px 16px;border-radius:24px;background:var(--teal);color:#fff;font-weight:800}.voicebtn{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:10px 14px;border-radius:22px;background:#fff;color:var(--teal);border:1.5px solid var(--teal);font-weight:800}.voicebtn.rec{background:var(--orange);border-color:var(--orange);color:#fff;animation:pulse 1.1s infinite}@keyframes pulse{0%{opacity:1}50%{opacity:.62}100%{opacity:1}}.status{font-size:12px;color:var(--muted);margin-top:6px;min-height:18px}.status.err{color:var(--orange);font-weight:800}.navbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(env(safe-area-inset-bottom) + 10px);display:flex;gap:10px;max-width:760px;margin:0 auto}.navbar button{flex:1;padding:14px;border-radius:25px;font-weight:850}.back{background:#fff;border:2px solid var(--teal);color:var(--teal)}.next{background:var(--teal);color:#fff}.photogrid{display:grid;grid-template-columns:1fr;gap:12px}.photoitem{background:#fff;border:1px solid var(--line);border-radius:13px;padding:10px}.photo{aspect-ratio:4/3;border:1.5px dashed var(--line);border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.photo img{width:100%;height:100%;object-fit:cover}.photo .del{position:absolute;right:4px;top:4px;background:rgba(224,122,47,.9);color:#fff;border-radius:50%;font-weight:900;width:25px;height:25px}.sigpad,.sketchpad{width:100%;height:150px;border:1.5px dashed var(--amber);border-radius:12px;background:#fff;touch-action:none}.sketchpad{height:260px}html.drawing-lock,body.drawing-lock{overflow:hidden;overscroll-behavior:none}.photonote{min-height:62px;font-size:15px}.photoitem .voicebtn{margin-top:6px}.minibtn{display:inline-flex;padding:9px 13px;margin-top:8px;border:1px solid var(--line);border-radius:20px;background:#fff;color:var(--teal);font-weight:800}.toolrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.toolrow .minibtn{margin-top:0}.minibtn.active{background:var(--teal);color:#fff;border-color:var(--teal)}.drawhint{font-size:11px;color:var(--muted);margin-top:7px}.qrbox{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}.qrbox img{width:110px;height:110px;border:1px solid var(--line);padding:5px;background:#fff}.summaryline{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding:5px 0;font-size:13px}.summaryline span:last-child{font-weight:800;text-align:right}.reportopt{display:flex;align-items:center;gap:10px;padding:11px;background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0}.reportopt input{width:24px;height:24px}#printRoot{display:none}.print-h1,.print-sec{font-family:Arial,sans-serif}@media print{body{background:#fff}.appbar,.progress,.screen,.navbar{display:none!important}#printRoot{display:block;color:#000;font-family:Arial,sans-serif;font-size:12px}.print-cover{page-break-after:always}.print-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.print-h1{text-align:center;font-size:18px;font-weight:800;margin:0 0 8px}.print-sub{text-align:center;font-size:10px;color:#555;margin-bottom:10px}.print-qr{width:120px;height:120px}.print-id{font-size:12px;line-height:1.45}.print-sec{font-size:14px;font-weight:800;border-bottom:1px solid #000;margin:10px 0 4px;padding-bottom:2px}.print-row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dotted #bbb;padding:2px 0}.print-row span:first-child{color:#333}.print-row span:last-child{font-weight:700;text-align:right;max-width:60%}.print-photos{display:flex;flex-wrap:wrap;gap:6px}.print-photos figure{width:31%;margin:0;font-size:9px;text-align:center}.print-photos img{width:100%;border:1px solid #999}.print-signs{display:flex;gap:12px;margin-top:18px}.print-sign{flex:1;text-align:center}.print-sign img{height:58px}.print-sign .line{border-top:1px solid #000;font-size:10px;padding-top:2px}.devprint{font-size:9px;color:#555;text-align:center;margin:6px 0 10px}.pagebreak{page-break-before:always}}
+
+/* v0.12.1: единый зелёный цвет выбора + контроль обязательных пунктов */
+:root{--choice-green:#2A9D8F;--choice-green-bg:#EAF7F4;--choice-green-dark:#174D44;}
+select.compactSelect{border-color:var(--choice-green);color:var(--choice-green-dark);font-weight:800;outline-color:var(--choice-green);}
+select.compactSelect:focus{border-color:var(--choice-green);box-shadow:0 0 0 3px rgba(42,157,143,.16);}
+.dropmulti{border-color:var(--choice-green);}
+.dropmulti summary{color:var(--choice-green-dark);background:var(--choice-green-bg);}
+.dropmulti summary:after{color:var(--choice-green-dark);}
+.choice input[type=checkbox],.linerow input[type=checkbox],.reportopt input{accent-color:var(--choice-green);}
+.choice.checked{border-color:var(--choice-green);background:var(--choice-green-bg);}
+.choice.checked .lbl{color:var(--choice-green-dark);}
+.tag{background:var(--choice-green-bg);color:var(--choice-green-dark);border:1px solid rgba(42,157,143,.35);}
+.selectedLine b{color:var(--choice-green-dark);}
+.typebtn.sel,.typeSelectCard{border-color:var(--choice-green);}
+.typebtn.sel{background:var(--choice-green-bg);}
+.minibtn.active{background:var(--choice-green);border-color:var(--choice-green);}
+
+
+.validationBox{display:none;background:#FFF1ED;border:1.5px solid var(--bad);color:#5A2417;border-radius:13px;padding:12px;margin:10px 0 12px;font-size:13px;line-height:1.35}.validationBox b{display:block;margin-bottom:6px}.validationBox ul{margin:6px 0 0 18px;padding:0}.validationBox li{margin:3px 0}.field.missing{border-color:var(--bad);box-shadow:0 0 0 2px rgba(214,90,49,.10)}
 </style>
 </head>
 <body>
@@ -52,6 +71,7 @@ select.compactSelect{appearance:auto;background:#fff;font-weight:700}
   <div class="sectitle">Подписи и отправка</div><div class="secsub">Подписи сторон и формирование полного PDF-акта.</div>
   <div id="signFields"></div>
   <div class="card"><b>Отправка</b><label class="reportopt"><input type="checkbox" id="sendDefault" checked> Отправить текстовую часть на pavel.rus178@yandex.ru</label><input type="email" id="extraMail" placeholder="дополнительная почта, если нужно"><div class="hint">Полный акт с фото, эскизом, подписями и QR формируется только через PDF. Кнопка отправки по почте передаёт текстовую часть и не заменяет PDF-акт.</div></div>
+  <div class="validationBox" id="validationBox"></div>
   <button class="bigbtn" onclick="printReport()">🖨 Печать / Сохранить как PDF</button>
   <button class="bigbtn secondary" onclick="openReportWindow()">📄 Открыть акт для PDF</button>
   <button class="bigbtn secondary" onclick="emailReport()">✉️ Отправить текстовую часть</button>
@@ -108,7 +128,7 @@ function updateTypeSummary(){const sel=document.getElementById('typeSelect');con
 function isoDate(){return new Date().toISOString().slice(0,10)}
 function genId(){const t=TYPES[STATE.type]||TYPES.pu;const d=new Date();const ds=d.toISOString().slice(0,10).replace(/-/g,'');const hm=String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');const r=Math.random().toString(36).toUpperCase().replace(/[^A-Z0-9]/g,'').slice(2,6);return `RSON-${t.prefix}-${ds}-${hm}-${r}`;}
 function startAct(){if(!STATE.type){alert('Выберите тип акта.');return}if(!STATE.id)STATE.id=genId();STATE.date=STATE.date||isoDate();STATE.fields.act_date=STATE.fields.act_date||STATE.date;renderAll();showStep(1);saveDraft()}
-function newCleanAct(){if(confirm('Очистить текущий акт и начать заново?')){['rson_eact_v11','rson_eact_v10','rson_eact_v09','rson_eact_v08','rson_eact_v07','rson_eact_v06','rson_eact_v05'].forEach(k=>localStorage.removeItem(k));location.reload()}}
+function newCleanAct(){if(confirm('Очистить текущий акт и начать заново?')){['rson_eact_v0121','rson_eact_v11','rson_eact_v10','rson_eact_v09','rson_eact_v08','rson_eact_v07','rson_eact_v06','rson_eact_v05'].forEach(k=>localStorage.removeItem(k));location.reload()}}
 function showStep(i){STATE.step=Math.max(0,Math.min(STEPS.length-1,i));document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('screen-'+STEPS[STATE.step]).classList.add('active');document.querySelector('.navbar').style.display=STATE.step===0?'none':'flex';updateProgress();setTimeout(initPads,80);setTimeout(initPads,350);window.scrollTo(0,0)}
 function nextStep(){if(STATE.step===0){startAct();return}if(STATE.step<STEPS.length-1){if(STATE.step===1||STATE.step===2)saveFormValues();showStep(STATE.step+1);saveDraft()}}
 function backStep(){if(STATE.step>0){saveFormValues();showStep(STATE.step-1)}}
@@ -177,13 +197,59 @@ function val(id){return esc(STATE.fields[id]||'')}
 function row(k,v){return `<div class="print-row"><span>${k}</span><span>${v||''}</span></div>`}
 function rowField(f){if(f.type==='line')return lineReport(f.id,f.label);if(f.type==='multi'){let vals=f.choices.filter((ch,i)=>STATE.checks[`${f.id}_${i}`]);if(STATE.fields[f.id+'_other'])vals.push(STATE.fields[f.id+'_other']);return row(f.label,esc(vals.join('; ')))}if(f.type==='choice')return row(f.label,`${val(f.id)}${STATE.fields[f.id+'_other']?' / '+val(f.id+'_other'):''}`);if(f.type==='signal')return row(f.label,['МТС','Билайн','Мегафон','Теле2'].map(o=>`${o}: ${val('sig_'+o)}`).join('; '));return row(f.label,val(f.id))}
 function lineReport(id,label){let parts=[];if(STATE.checks[id+'_kanal']||STATE.fields[id+'_kanal_val']||STATE.fields[id+'_kanal_size']){let size=STATE.fields[id+'_kanal_size']||'';if(size==='Другой вариант'&&STATE.fields[id+'_kanal_other'])size=STATE.fields[id+'_kanal_other'];parts.push(`Кабель-канал${size?' '+esc(size):''}: ${esc(STATE.fields[id+'_kanal_val']||'')} м`)}['pvh','pnd'].forEach(k=>{if(STATE.checks[id+'_'+k]||STATE.fields[id+'_'+k+'_val']){const name=k==='pvh'?'Гофротруба ПВХ':'Гофротруба ПНД';parts.push(`${name}: ${esc(STATE.fields[id+'_'+k+'_val']||'')}`)}});if(STATE.fields[id+'_other'])parts.push(esc(STATE.fields[id+'_other']));return row(label,parts.join('; '))}
-function printReport(){document.getElementById('printRoot').innerHTML=buildReport();setTimeout(()=>window.print(),250)}
-function openReportWindow(){const w=window.open('about:blank','_blank');if(!w){alert('Окно заблокировано. Откройте приложение в Safari/Chrome, не внутри Telegram.');return}w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${STATE.id}</title><style>${[...document.styleSheets].map(s=>{try{return [...s.cssRules].map(r=>r.cssText).join('\n')}catch(e){return ''}}).join('\n')}</style></head><body><div id="printRoot" style="display:block">${buildReport()}</div><button onclick="window.print()" style="position:fixed;bottom:16px;left:16px;right:16px;padding:16px;border:0;border-radius:16px;background:#1C7293;color:#fff;font-weight:800;font-size:18px">Печать / PDF</button></body></html>`);w.document.close()}
-function emailReport(){saveFormValues();let to=[];if(document.getElementById('sendDefault').checked)to.push('pavel.rus178@yandex.ru');const extra=document.getElementById('extraMail').value.trim();if(extra)to.push(extra);if(!to.length){alert('Не выбрана почта для отправки.');return}const subject=`Акт обследования ${STATE.id} ${TYPES[STATE.type]?.title||''}`;const body=buildTextReport()+`\n\nПолный акт с фото, эскизом, подписями и QR формируется через PDF.`;location.href=`mailto:${to.join(',')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+function fieldText(id){return String(STATE.fields[id]||'').trim()}
+function multiHasValue(f){let ok=false;(f.choices||[]).forEach((ch,i)=>{if(STATE.checks[`${f.id}_${i}`])ok=true});if(fieldText(f.id+'_other'))ok=true;return ok}
+function choiceNeedsOther(f){const v=fieldText(f.id);return (v==='Другое'||v==='Оператор'||v==='Другой вариант')&&!fieldText(f.id+'_other')}
+function lineHasValue(id){return !!(STATE.checks[id+'_kanal']||STATE.checks[id+'_pvh']||STATE.checks[id+'_pnd']||fieldText(id+'_kanal_val')||fieldText(id+'_kanal_size')||fieldText(id+'_kanal_other')||fieldText(id+'_pvh_val')||fieldText(id+'_pnd_val')||fieldText(id+'_other'))}
+function signalMissingItems(){const m=[];['МТС','Билайн','Мегафон','Теле2'].forEach(o=>{if(!fieldText('sig_'+o))m.push(o)});return m}
+function collectRequiredMissing(){saveFormValues();const miss=[];document.querySelectorAll('.field.missing').forEach(el=>el.classList.remove('missing'));
+  if(!STATE.type)miss.push({id:'typeSelect',text:'Старт — тип акта'});
+  if(!STATE.id)miss.push({id:'objectIdText',text:'Титульный лист — индивидуальный номер объекта'});
+  const checkField=(f,section)=>{
+    const name=`${section} — ${f.label}`;
+    if(['text','number','date','gps','email'].includes(f.type)){if(!fieldText(f.id))miss.push({id:f.id,text:`${name} (${f.id})`});return;}
+    if(f.type==='choice'){if(!fieldText(f.id))miss.push({id:f.id,text:`${name} (${f.id})`});else if(choiceNeedsOther(f))miss.push({id:f.id+'_other',text:`${name}: требуется уточнение (${f.id}_other)`});return;}
+    if(f.type==='multi'){if(!multiHasValue(f))miss.push({id:f.id,text:`${name} (${f.id})`});return;}
+    if(f.type==='line'){if(!lineHasValue(f.id))miss.push({id:f.id,text:`${name} (${f.id})`});return;}
+    if(f.type==='signal'){const sm=signalMissingItems();if(sm.length)miss.push({id:f.id,text:`${name}: не заполнено ${sm.join(', ')}`});return;}
+  };
+  commonCover.forEach(f=>checkField(f,'Титульный лист'));
+  if(STATE.type)schemaFor(STATE.type).forEach(sec=>(sec.fields||[]).forEach(f=>checkField(f,sec.section)));
+  if(!STATE.sketch)miss.push({id:'sketch',text:'Эскиз — не выполнен эскиз размещения оборудования'});
+  if(!STATE.photos.length)miss.push({id:'photosList',text:'Фотофиксация — не добавлено ни одной фотографии'});
+  if(!STATE.signs.executor)miss.push({id:'sig_executor',text:'Подписи — отсутствует подпись исполнителя'});
+  if(!(STATE.signs.customer||STATE.signs.owner))miss.push({id:'sig_customer',text:'Подписи — отсутствует подпись заказчика или собственника'});
+  return miss;
+}
+function showMissing(miss){const box=document.getElementById('validationBox');if(!box)return;box.style.display=miss.length?'block':'none';if(!miss.length){box.innerHTML='';return}box.innerHTML=`<b>Акт не может быть отправлен / сформирован в PDF.</b><div>Не заполнены обязательные пункты:</div><ul>${miss.slice(0,60).map(m=>`<li>${esc(m.text)}</li>`).join('')}${miss.length>60?`<li>... и ещё ${miss.length-60}</li>`:''}</ul>`;
+  miss.forEach(m=>{const el=document.getElementById('f_'+m.id)||document.getElementById(m.id)||document.getElementById('drop_'+m.id)||document.getElementById('sig_'+m.id);if(el){const field=el.closest&&el.closest('.field');if(field)field.classList.add('missing')}});
+  box.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function validateBeforeOutput(){const miss=collectRequiredMissing();showMissing(miss);if(miss.length){alert(`Акт не может быть отправлен или сформирован в PDF. Не заполнено пунктов: ${miss.length}. Список показан на экране «Подписи и отправка».`);showStep(STEPS.indexOf('sign'));return false}return true}
+function printReport(){if(!validateBeforeOutput())return;document.getElementById('printRoot').innerHTML=buildReport();setTimeout(()=>window.print(),250)}
+function openReportWindow(){if(!validateBeforeOutput())return;const w=window.open('about:blank','_blank');if(!w){alert('Окно заблокировано. Откройте приложение в Safari/Chrome, не внутри Telegram.');return}w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${STATE.id}</title><style>${[...document.styleSheets].map(s=>{try{return [...s.cssRules].map(r=>r.cssText).join('\n')}catch(e){return ''}}).join('\n')}
+/* v0.12.1: единый зелёный цвет выбора + контроль обязательных пунктов */
+:root{--choice-green:#2A9D8F;--choice-green-bg:#EAF7F4;--choice-green-dark:#174D44;}
+select.compactSelect{border-color:var(--choice-green);color:var(--choice-green-dark);font-weight:800;outline-color:var(--choice-green);}
+select.compactSelect:focus{border-color:var(--choice-green);box-shadow:0 0 0 3px rgba(42,157,143,.16);}
+.dropmulti{border-color:var(--choice-green);}
+.dropmulti summary{color:var(--choice-green-dark);background:var(--choice-green-bg);}
+.dropmulti summary:after{color:var(--choice-green-dark);}
+.choice input[type=checkbox],.linerow input[type=checkbox],.reportopt input{accent-color:var(--choice-green);}
+.choice.checked{border-color:var(--choice-green);background:var(--choice-green-bg);}
+.choice.checked .lbl{color:var(--choice-green-dark);}
+.tag{background:var(--choice-green-bg);color:var(--choice-green-dark);border:1px solid rgba(42,157,143,.35);}
+.selectedLine b{color:var(--choice-green-dark);}
+.typebtn.sel,.typeSelectCard{border-color:var(--choice-green);}
+.typebtn.sel{background:var(--choice-green-bg);}
+.minibtn.active{background:var(--choice-green);border-color:var(--choice-green);}
+
+</style></head><body><div id="printRoot" style="display:block">${buildReport()}</div><button onclick="window.print()" style="position:fixed;bottom:16px;left:16px;right:16px;padding:16px;border:0;border-radius:16px;background:#1C7293;color:#fff;font-weight:800;font-size:18px">Печать / PDF</button></body></html>`);w.document.close()}
+function emailReport(){if(!validateBeforeOutput())return;saveFormValues();let to=[];if(document.getElementById('sendDefault').checked)to.push('pavel.rus178@yandex.ru');const extra=document.getElementById('extraMail').value.trim();if(extra)to.push(extra);if(!to.length){alert('Не выбрана почта для отправки.');return}const subject=`Акт обследования ${STATE.id} ${TYPES[STATE.type]?.title||''}`;const body=buildTextReport()+`\n\nПолный акт с фото, эскизом, подписями и QR формируется через PDF.`;location.href=`mailto:${to.join(',')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
 function buildTextReport(){let lines=[`Акт: ${STATE.id}`,`Тип: ${TYPES[STATE.type]?.title||''}`,`Дата: ${val('act_date')}`,`Объект: ${val('object_name')}`,`Адрес: ${val('address')}`,`GPS: ${val('gps')}`];schemaFor(STATE.type).forEach(sec=>{lines.push('\n'+sec.section);sec.fields.forEach(f=>lines.push(stripHtml(rowField(f))))});if(STATE.photos.length){lines.push('\nФотофиксация');STATE.photos.forEach((p,i)=>lines.push(`Фото ${i+1}: ${p.note||'без пояснения'}`))}return lines.join('\n')}
 function stripHtml(s){const d=document.createElement('div');d.innerHTML=s;return d.textContent.replace(/\s+/g,' ').trim()}
-function saveDraft(){try{localStorage.setItem('rson_eact_v11',JSON.stringify(STATE))}catch(e){}}
-function loadDraft(silent=false){try{const raw=(localStorage.getItem('rson_eact_v11')||localStorage.getItem('rson_eact_v10')||localStorage.getItem('rson_eact_v09')||localStorage.getItem('rson_eact_v08')||localStorage.getItem('rson_eact_v07')||localStorage.getItem('rson_eact_v06')||localStorage.getItem('rson_eact_v05'));if(!raw){if(!silent)alert('Сохранённый черновик не найден.');return false}const d=JSON.parse(raw);if(d.type==='pole300'){d.type='pole';d.fields=d.fields||{};d.fields.pole_type=d.fields.pole_type||'300'}if(d.type==='pole600'){d.type='pole';d.fields=d.fields||{};d.fields.pole_type=d.fields.pole_type||'600'}Object.assign(STATE,d);renderTypes();if(STATE.type)renderAll();if(!silent)showStep(STATE.id?1:0);else showStep(0);return true}catch(e){if(!silent)alert('Ошибка загрузки черновика.');return false}}
+function saveDraft(){try{localStorage.setItem('rson_eact_v0121',JSON.stringify(STATE))}catch(e){}}
+function loadDraft(silent=false){try{const raw=(localStorage.getItem('rson_eact_v0121')||localStorage.getItem('rson_eact_v11')||localStorage.getItem('rson_eact_v10')||localStorage.getItem('rson_eact_v09')||localStorage.getItem('rson_eact_v08')||localStorage.getItem('rson_eact_v07')||localStorage.getItem('rson_eact_v06')||localStorage.getItem('rson_eact_v05'));if(!raw){if(!silent)alert('Сохранённый черновик не найден.');return false}const d=JSON.parse(raw);if(d.type==='pole300'){d.type='pole';d.fields=d.fields||{};d.fields.pole_type=d.fields.pole_type||'300'}if(d.type==='pole600'){d.type='pole';d.fields=d.fields||{};d.fields.pole_type=d.fields.pole_type||'600'}Object.assign(STATE,d);renderTypes();if(STATE.type)renderAll();if(!silent)showStep(STATE.id?1:0);else showStep(0);return true}catch(e){if(!silent)alert('Ошибка загрузки черновика.');return false}}
 function continueDraft(){const ok=loadDraft(false);if(ok&&STATE.type){renderAll();showStep(STATE.id?1:0)}}
 window.addEventListener('beforeunload',saveDraft);if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('service-worker.js').catch(()=>{});init();
 </script>
