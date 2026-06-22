@@ -44,6 +44,24 @@ select.compactSelect:focus{border-color:var(--choice-green);box-shadow:0 0 0 3px
 
 
 .validationBox{display:none;background:#FFF1ED;border:1.5px solid var(--bad);color:#5A2417;border-radius:13px;padding:12px;margin:10px 0 12px;font-size:13px;line-height:1.35}.validationBox b{display:block;margin-bottom:6px}.validationBox ul{margin:6px 0 0 18px;padding:0}.validationBox li{margin:3px 0}.field.missing{border-color:var(--bad);box-shadow:0 0 0 2px rgba(214,90,49,.10)}
+/* v0.12.1 style audit fix: all choice placeholders/options are green */
+select.compactSelect, select.compactSelect:invalid, select.compactSelect.empty{
+  border-color:var(--choice-green)!important;
+  color:var(--choice-green-dark)!important;
+  font-weight:800!important;
+}
+select.compactSelect option{color:var(--choice-green-dark);font-weight:700;}
+select.compactSelect option[value=""]{color:var(--choice-green-dark);font-weight:800;}
+.selectedLine{color:var(--choice-green-dark)!important;font-weight:700;}
+.dropmulti summary{color:var(--choice-green-dark)!important;background:var(--choice-green-bg)!important;}
+.choice{border-color:rgba(42,157,143,.55)!important;background:#fff;}
+.choice .lbl{color:var(--choice-green-dark)!important;}
+.choice .sub{color:var(--choice-green-dark)!important;opacity:.8;}
+.choice.checked{border-color:var(--choice-green)!important;background:var(--choice-green-bg)!important;}
+.linerow input[type=checkbox], .choice input[type=checkbox], .reportopt input{accent-color:var(--choice-green)!important;}
+.typeSelectCard, .typebtn{border-color:rgba(42,157,143,.65)!important;}
+.typebtn b{color:var(--choice-green-dark)!important;}
+.typebtn span{color:var(--choice-green-dark)!important;}
 </style>
 </head>
 <body>
